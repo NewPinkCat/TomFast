@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #242429;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #e4e4e7;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: rgba(16, 185, 129, 0.3);
+    color: #ffffff;
+  }
+}
+
+/* Micro-scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Subtle elevation cards */
+.pro-card {
+  background-color: #111114;
+  border: 1px solid #242429;
+  border-radius: 10px;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pro-card:hover {
+  background-color: #141418;
+  border-color: #383842;
+}
+
+.pro-input {
+  background-color: #111114;
+  border: 1px solid #242429;
+  border-radius: 8px;
+  color: #f4f4f5;
+  transition: border-color 0.15s ease;
+}
+.pro-input:focus {
+  outline: none;
+  border-color: #10b981;
+}
+
+/* Tabular numbers for download counters */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
